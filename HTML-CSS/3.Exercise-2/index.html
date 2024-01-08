@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Rethink+Sans:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Montserrat:wght@300&family=Rethink+Sans:wght@500&display=swap');
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 3rem;
+            padding-right: 4rem;
+          }
+        ul.nav li.nav-tab  {
+            outline: 1px solid black;
+            padding: 1rem;
+            margin: 1rem;
+            line-height: 1;
+            font-family: Roboto, sans-serif;
+            color:black;
+            line-height: 24px;
+            padding-right: 5rem;
+        }  
+        body {
+           display:flex;
+            background-color: rgb(244, 244, 244);
+            text-wrap:balance;
+          }
+        a {
+            color: black;
+            text-decoration: none; 
+            text-wrap: balance;
+            font-family: 'Afacad', sans-serif;
+
+        }
+        ul.nav li.nav-tab:hover{
+           background-color: rgb(206, 189, 166);
+        }
+        section div  {
+            margin: 0%;
+        }
+        section div h1 {
+            font-size: 2rem;
+            font-family: 'Afacad', sans-serif;
+            margin-bottom: 0.5rem
+        }
+        section div p {
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+        ul.tag-list {
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        ol.instruction-list {
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif; 
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav">
+            <li class="nav-tab"><a href="#introduction">Introduction</a></li>
+            <li class="nav-tab"><a href="news.asp">HTML Basics</a></li>
+            <li class="nav-tab"><a href="contact.asp">CSS Styling</a></li>
+            <li class="nav-tab"><a href="about.asp">Page Layout</a></li>
+            <li class="nav-tab"><a href="about.asp">Responsive Design</a></li>
+            <li class="nav-tab"><a href="#animation">Animations</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="introduction">
+            <h1>Introduction</h1>
+            <p>HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are fundamental technologies for building
+            and designing websites. HTML provides the structure of a webpage, while CSS enhances its presentation and styling.</p>
+        </div>
+        <div>
+            <h1>HTML Basics</h1>
+            <p>HTML is the standard markup language used to create the structure of webpages. It consists of various elements that
+            define different parts of the content, such as headings, paragraphs, links, images, and more.
+            <ul class="tag-list">
+                <li>&lt;head&gt;</li>
+                <li>&lt;title&gt;</li>
+                <li>&lt;body&gt;</li>
+                <li>&lt;h1&gt; to &lt;h6&gt; </li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;img&gt;</li>
+            </ul>
+            <ol class="instruction-list">
+                <li class="instruction-list-item">Start with the <code>&lt;html&gt;</code> tag.</li>
+                <li class="instruction-list-item">Add the <code>&lt;head&gt;</code> section for metadata and the document's title.</li>
+                <li class="instruction-list-item">Within the head, use the <code>&lt;title&gt;</code> tag to set the page title.</li>
+                <li class="instruction-list-item">Move to the <code>&lt;body&gt;</code> section where the content of the page goes.</li>
+                <li class="instruction-list-item">Use headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) and paragraphs (<code>&lt;p&gt;</code>) for text content.</li>
+                <li class="instruction-list-item">Insert links with the <code>&lt;a&gt;</code> tag and images with the <code>&lt;img&gt;</code> tag.</li>
+            </ol>
+        
+        </p>
+        </div>
+        <div>
+            <h1>CSS Styling</h1>
+            <p>CSS is used to style and layout web pages, providing a way to control the appearance of elements. It allows for
+            customization of colors, fonts, spacing, and positioning to create visually appealing and responsive designs.</p>
+        </div>
+        <div>
+            <h1>Page Layout</h1>
+            <p>Creating effective page layouts is a crucial aspect of web design. CSS provides various layout techniques, such as
+            Flexbox and Grid, to structure and position elements on a webpage efficiently.</p>
+        </div>
+        <div>
+            <h1>Responsive Design</h1>
+            <p>Responsive design ensures that webpages adapt to different screen sizes and devices. Techniques like media queries in
+            CSS allow developers to create websites that look great on desktops, tablets, and smartphones.</p>
+        </div>
+        <div id="animation">
+            <h1>Animation</h1>
+            <p>Adding animations to web elements enhances user experience. CSS provides keyframe animations and transitions that
+            allow developers to create engaging and dynamic content on webpages.</p>
+        </div>
+    </section>
+   
+
+</body>
+</html>

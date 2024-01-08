@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+            @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Karla:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@300&family=Rethink+Sans:wght@500&display=swap');
+            
+        * {
+            margin: 0;
+            padding: 0;
+            }
+        body {
+            width: 100%;
+            height:100%;
+            margin:0;
+            padding:0;
+            
+        }
+       .textBox {
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 100px; 
+        color: white;
+        }
+        .textBox h1 {
+            
+        font-size: 3em;
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        -webkit-text-stroke: 0.5px #000000;
+        }
+        .textBox h2 {
+            
+            font-size: 5.5em;
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            -webkit-text-stroke: 2px #000000;
+            }
+        .container {
+            width: 100%;
+            height:100%;
+            margin:0;
+            padding:0;
+            background-color: brown;
+            
+        }
+       
+        .containerA img:nth-child(1) {
+            position: fixed;
+            z-index:-1;
+            top:-40%;
+            width: 100%;
+            height: 100%;
+        }
+        .containerA img:nth-child(2) {
+            position: fixed;
+            z-index:-1;
+            top:-40%;
+            width: 100%;
+            height: 100%;
+        }
+        .containerA img:nth-child(3) {
+            position: fixed;
+            top:-26%;
+
+            width: 100%;
+            height: 100%;  
+        }
+    
+        .containerB img:nth-child(1) {
+            position: fixed;
+            bottom: -1%;
+
+        }
+        .containerB img:nth-child(2) {
+            position: fixed;
+            bottom: 0;
+            left:-10px;
+
+        }
+        .containerB img:nth-child(3) {
+            position: fixed;
+            bottom: -10px;
+            left:-10px;
+
+        }
+        .containerC  {
+            width: 100%;
+            height: 100%;
+        }
+
+        .containerC img:nth-child(1) {
+            position: fixed;
+            bottom:0;
+            right:0;
+            
+
+        }
+        .containerC img:nth-child(2) {
+            position: fixed;
+            bottom:0;
+            right:0;
+
+        }
+        .containerC img:nth-child(3) {
+            position: fixed;
+            bottom: -4px;
+           right:-5px;
+
+        }
+        .spiral {
+            position: fixed;
+            z-index:1;
+            
+        }
+        .login {
+            background-color: white;
+            border: 2px solid black;
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            width: 40%;
+            height: 300px;
+            border-radius: 10px;
+            
+           
+        }
+        .form {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding:40px;
+            font-family: 'Karla', sans-serif;
+            font-size:20px;
+            gap:10px;
+            
+          
+        }
+    
+        input[type=text]{
+            border-radius:10px;
+            outline: none;
+            height:30px;
+            width: 50%;
+            border: 2px solid black;
+            
+          }
+       .label {
+        display:flex;
+        justify-content: flex-start;
+       }
+
+       .button {
+        margin-top: 20px;
+        height:50px;
+        width: 30%;
+        border-radius: 10px;
+        background-color: #fb6645;
+        font-family: 'Karla', sans-serif;
+        color: #ffff;
+        font-size: 20px;
+       }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="container" >
+            <div class="textBox">
+                <h2>00:00</h2>
+            </div>
+            <div class="spiral">
+                <img  src="svg/spiral.svg" width="100%" preserveAspectRatio="none" alt="Gold Star"   >
+
+            </div>
+           <div class="containerA">
+            <img  src="svg/Blob-login.svg" width="100%" preserveAspectRatio="none" alt="Gold Star"   >
+            <img  src="svg/Blob-line-top.svg" preserveAspectRatio="none"  alt="Gold Star"   >
+            
+            
+           </div>
+           <div class="containerB">
+            <img  src="svg/Rainbow-left.svg"  alt="Gold Star"  >
+            <img  src="svg/Rainbow-lineLeft.svg"  alt="Gold Star"  >
+            <img  src="svg/radial-left.svg"  alt="Gold Star"  >
+           </div>
+           <div class="containerC">
+            <img  src="svg/Rainbow-right.svg"   alt="Gold Star"  >
+            <img  src="svg/Rainbow-rightline.svg"  alt="Gold Star"  >
+            <img src="svg/radial-right.svg"  alt="Gold Star"  >
+           </div>
+        </div>
+        <div class = "login">
+            <form class="form">
+                <label class="label"> USERNAME</label>
+                <input class="input" type="text"/>
+                <label class="label"> PASSWORD</label>
+                <input class="input" type="text"/>
+                <button class="button">SUBMIT</button>
+            </form>
+    </section>
+</body>
+</html>
