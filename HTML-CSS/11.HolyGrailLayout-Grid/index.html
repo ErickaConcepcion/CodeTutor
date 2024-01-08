@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        header,
+        nav,
+        aside,
+        main,
+        footer {
+          border: 3px solid;
+          padding: 16px;
+        }
+      
+        header {
+          border-color: hsl(45deg 100% 50%);
+          background-color: hsl(45deg 100% 50% / 0.2);
+        }
+      
+        nav {
+          border-color: hsl(170deg 100% 35%);
+          background-color: hsl(170deg 100% 35% / 0.2);
+        }
+      
+        main {
+          border-color: hsl(220deg 100% 50%);
+          background-color: hsl(220deg 100% 50% / 0.2);
+        }
+      
+        aside {
+          border-color: hsl(300deg 100% 45%);
+          background-color: hsl(300deg 100% 45% / 0.2);
+        }
+      
+        footer {
+          border-color: hsl(350deg 100% 60%);
+          background-color: hsl(350deg 100% 60% / 0.2);
+        }
+        body {
+          margin:0;
+        }
+        .wrapper {
+          height:100%;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          display:grid;
+          grid-template-columns: 200px auto 150px;
+          grid-template-rows: 4rem auto 4rem;
+          grid-template-areas: 
+            "header header header"
+            "nav aside main"
+            "footer footer footer";
+        }
+        header {
+          grid-area: header;
+        }
+        main {
+          grid-area:main;
+        }
+        nav {
+          grid-area: nav;
+        }
+        aside {
+          grid-area: aside;
+        }
+        footer {
+          grid-area: footer;
+        }
+        
+        
+      
+        html,
+        body {
+          height: 100%;
+        }
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Header</header>
+        <nav> Nav </nav>
+        <aside>Aside </aside>
+        <main>Main</main>
+        <footer>Footer</footer>
+        
+        
+      </div>
+    
+</body>
+</html>
