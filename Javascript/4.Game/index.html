@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: sans-serif;
+          }
+          
+          body {
+            max-width: 500px;
+            height: 100%;
+            background-color: cornflowerblue;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          h1 {
+            color: #fff;
+          }
+          
+          form {
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 40px;
+            border-radius: 8px;
+          }
+          
+          fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          
+          button {
+            border: none;
+            background: crimson;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 20px;
+          }
+          
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+<form id="rock-paper-scissors">
+  <fieldset>
+    <label for="player1">Player 1</label>
+    <select name="player1" id="player1">
+      <option value="rock">Rock</option>
+      <option value="paper">Paper</option>
+      <option value="scissors">Scissors</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label for="player2">Player 2</label>
+    <select name="player2" id="player2">
+      <option value="rock">Rock</option>
+      <option value="paper">Paper</option>
+      <option value="scissors">Scissors</option>
+    </select>
+  </fieldset>
+  <button type="submit">Go!</button>
+</form>
+<script>
+    function getResults(player1, player2) {
+        // Exercise: Conditionals
+        // We've set up a function to receive player inputs
+        // for a rock-paper-scissors game. Each player will
+        // play either "rock", "paper", or "scissors".
+        // Use conditional statements to return the winner of the game.
+        let result;
+            if (player1 == player2) {
+                result ='Its a draw'
+            }
+            if ( (player1 == "rock" && player2 == "scissors") || (player1 == "scissors" && player2 == "rock")) {
+                result = player1 == "rock" ? "Player 1 wins" : "Player 2 wins";
+            }
+            if ( (player1 == "rock" && player2 == "paper") || (player1 == "paper" && player2 == "rock")) {
+                result = player1 == "paper" ? "Player 1 wins" : "Player 2 wins";
+            }
+            if ( (player1 == "paper" && player2 == "scissors") || (player1 == "scissors" && player2 == "paper")) {
+                result = player1 == "scissors" ? "Player 1 wins" : "Player 2 wins";
+            }
+       
+       
+        
+        // Change the string below to output which player won the game!
+    
+        return result;
+        
+      }
+      
+      // For testing
+      document
+        .getElementById("rock-paper-scissors")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const form = event.currentTarget;
+          const formData = new FormData(form);
+          const player1 = formData.get("player1");
+          const player2 = formData.get("player2");
+          alert(getResults(player1, player2));
+        });
+      
+</script>
+</body>
+</html>
