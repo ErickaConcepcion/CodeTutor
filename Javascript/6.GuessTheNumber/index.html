@@ -67,11 +67,8 @@ function startGame() {
         if (parseInt(guess) < randomNumber) {
             alert('Higher');
         }
-        if (parseInt(guess) === randomNumber) {
-            alert ('you got it!');
-            break;
-        }
         guess = prompt("Enter your guess");
+        alert ('you got it!');
     }
     
 }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 0 24px;
+  color: #fff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#todos {
+  list-style: none;
+  padding: 0 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.todo {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.todo:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.todo__content {
+  padding: 16px 24px;
+  flex: 1;
+}
+
+.todo__close {
+  display: block;
+  background-color: crimson;
+  padding: 16px 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.todo--completed::after {
+  content: "";
+  width: calc(100% - 100px);
+  height: 5px;
+  border-radius: 999px;
+  background-color: #1e1e1e;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.todo--preview {
+  background-color: transparent;
+  color: white;
+  border: 3px dashed white;
+}
+
+#add-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.label {
+  color: white;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid white;
+  color: white;
+}
+
+.submit-btn {
+  display: block;
+  background-color: crimson;
+  padding: 16px 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.todo span {
+  padding: 16px 24px;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+<ul id="todos">
+  <!--   <li class="todo todo--completed todo--preview ">
+    <span class="todo__content">ASD </span> <button onclick='' class='todo__close '> Close</button>
+  </li> -->
+</ul>
+<form id="add-todo">
+  <label for="new-todo" class="label">New Item</label>
+  <div class="row">
+    <input type="text" name="content" id="new-todo" class="input" required>
+    <button type="submit" class="submit-btn">+ Add Todo</button>
+  </div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

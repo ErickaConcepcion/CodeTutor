@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 0 24px;
+  color: #fff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#todos {
+  list-style: none;
+  padding: 0 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.todo {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.todo:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.todo__content {
+  padding: 16px 24px;
+  flex: 1;
+}
+
+.todo__close {
+  display: block;
+  background-color: crimson;
+  padding: 16px 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.todo--completed::after {
+  content: "";
+  width: calc(100% - 100px);
+  height: 5px;
+  border-radius: 999px;
+  background-color: #1e1e1e;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.todo--preview {
+  background-color: transparent;
+  color: white;
+  border: 3px dashed white;
+}
+
+#add-todo {
+  display: flex;
+  flex-direction: row;
+
+  gap: 8px;
+  padding: 0 24px;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.label {
+  color: white;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid white;
+  color: white;
+}
+
+.submit-btn {
+  display: inline;
+
+  background-color: crimson;
+  padding: 16px 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+<ul id="todos">
+  <!-- This is where the generated "li" elements will go -->
+</ul>
+<!-- Create your todo form here with id="add-todo" -->
+<form id='add-todo'>
+  <input type='text' id='newSubmit' class='input' placeholder='Title'> 
+  <button class='submit-btn'>Submit</button>
+  <form>
+    <script>
+        const todoList = document.getElementById("todos");
+const previewTodo = document.querySelector(".todo--preview");
+
+function createTodo(content) {
+  const newTodo = document.createElement("li");
+  newTodo.classList.add("todo");
+
+  const todoItem = document.createElement("span");
+  todoItem.classList.add("todo__content");
+  todoItem.textContent = content;
+  todoItem.addEventListener("click", toggleTodo);
+
+  const closeBtn = document.createElement("button");
+  closeBtn.classList.add("todo__close");
+  closeBtn.textContent = "Close";
+  closeBtn.addEventListener("click", deleteTodo);
+
+  newTodo.appendChild(todoItem);
+  newTodo.appendChild(closeBtn);
+  todoList.insertBefore(newTodo, previewTodo);
+}
+
+function toggleTodo(event) {
+  const todo = event.target.closest(".todo");
+  todo.classList.toggle("todo--completed");
+}
+
+function deleteTodo(event) {
+  event.target.closest(".todo").remove();
+}
+
+// 1. Select the "add-todo" form
+const add = document.getElementById("add-todo");
+
+// 2. Create a function to handle new todo submissions.
+function newTodo() {
+  let inputValue = document.getElementById("newSubmit").value;
+}
+
+function clicked() {
+  let submitBtn = document.querySelector(".submit-btn");
+  //submitBtn.addEventListener("click",
+  console.log(submitBtn);
+}
+
+// Use the text input's value to add a new todo
+// with the submitted value as the content.
+
+// 3. Listen to the "submit" event using the function you just created
+
+    </script>
+</body>
+</html>
